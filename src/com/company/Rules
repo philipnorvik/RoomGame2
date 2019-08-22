@@ -1,3 +1,9 @@
 Rules for project
 
 - Never edit in master.
+- Always merge code through pull requests
+- Commit message should reflect content
+- Use feature branches
+- Everyone starts from master
+- Everyone targets master
+

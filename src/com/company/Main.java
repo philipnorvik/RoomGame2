@@ -1,5 +1,8 @@
 package com.company;
 
+
+import com.company.PhilipQ;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -13,6 +16,8 @@ public class Main {
 
         System.out.println(cr.getQuery(1));
 
+        PhilipQ philipQ = new PhilipQ();
+        philipQ.runQuiz();
 
     }
 }

@@ -9,15 +9,16 @@ public class Main {
 	// write your code here
 
         System.out.println("start");
-
-        ControllerRoom cr = new ControllerRoom();
-
-        cr.setRoomsIF(1);
-
-        System.out.println(cr.getQuery(1));
-
         PhilipQ philipQ = new PhilipQ();
         philipQ.runQuiz();
+
+
+       // ControllerRoom cr = new ControllerRoom();
+
+       // cr.setRoomsIF(1);
+
+        // System.out.println(cr.getQuery(1));
+
 
     }
 }

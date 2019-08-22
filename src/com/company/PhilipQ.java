@@ -1,13 +1,19 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class PhilipQ {
 
-    String question;
-    String answer;
+    String question= "";
+    String answer ="";
+    public List<PhilipQ> questions = new ArrayList<>();
 
     public PhilipQ() {
+        questions.add(new PhilipQ(q1, "c"));
+        questions.add(new PhilipQ(q2, "a"));
+        questions.add(new PhilipQ(q3, "a"));
     }
 
     public PhilipQ(String question, String answer) {
@@ -27,21 +33,14 @@ public class PhilipQ {
 
             "a, rund\n b, fyrkantig\n c, Trekantig\n";
 
-    public PhilipQ[] questions = {
-            new PhilipQ(q1, "c"),
-            new PhilipQ(q2, "a"),
-            new PhilipQ(q3, "a")
-    };
-
-
     public void runQuiz() {
         int score = 0;
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System. in);
 
-        for (int i = 0; i < questions.length; i++) {
-            System.out.println(questions[i].question);
-            String answer = input.nextLine();
-            if (answer.equalsIgnoreCase(questions[i].answer)) {
+        for (int i = 0; i < questions.size(); i++) {
+            System.out.println(questions.get(i).question);
+            String answer = scanner.nextLine();
+            if (answer.equalsIgnoreCase(questions.get(i).answer)) {
                 score++;
             }
         }

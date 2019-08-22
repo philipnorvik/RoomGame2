@@ -1,0 +1,12 @@
+//TODO
+
+en feature som visar frågan samt 
+svarsalternativen i terminalen
+
+en feature som kollar om man svarar rätt
+
+en feature som skickar nästa fråga
+
+en feature som räknar ihop alla poäng och visar
+poängen för spelaren
+

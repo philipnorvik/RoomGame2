@@ -25,7 +25,7 @@ public class PhilipQ {
         String a8 = "Fyrkantig";
         String a9 = "Trekantig";
 
-        questions.add(new Question(q1, a1, a2, a3, a3));
+        questions.add(new Question(q1, a3, a2, a1, a3));
         questions.add(new Question(q2, a4, a5, a6, a4));
         questions.add(new Question(q3, a7, a8, a9, a7));
 

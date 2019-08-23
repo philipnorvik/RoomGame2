@@ -14,6 +14,10 @@ public class Game {
     }
 
     public void runGame(){
+        if(display.getIndex() == 2){
+            System.out.println("Game over: " + display.pc.getPoints());
+            System.exit(0);
+        }
         display.setQuestion(pQuestion);
     }
 }

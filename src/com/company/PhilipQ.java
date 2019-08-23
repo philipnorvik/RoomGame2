@@ -33,7 +33,10 @@ public class PhilipQ {
     }
 
     public Question getQuestionAndAnswers(int index) {
-
+        if(index == 3) {
+            System.out.println("Game over");
+            System.exit(0);
+        }
         return questions.get(index);
 
     }

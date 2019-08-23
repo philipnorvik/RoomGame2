@@ -76,10 +76,7 @@ public class Display {
         buttons.get(2).setText(quest.getQuestionAndAnswers(index).getAnswer3());
 
         index++;
-        if(index == 4) {
-            System.out.println("Game over: " + pc.getPoints());
-            System.exit(0);
-        }
+
         panel.repaint();
         panel.revalidate();
     }

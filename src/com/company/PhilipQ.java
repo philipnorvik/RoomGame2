@@ -23,15 +23,15 @@ public class PhilipQ {
 
     String q1 = "Vilken färg är bananer?\n" +
 
-            "a, blå\n b, grön\n c, gul\n";
+            "[a] blå\n [b] grön\n [c] gul\n";
 
     String q2 = "Vilken färg är apelsiner?\n" +
 
-            "a, orange\n b, grön\n c, gul\n";
+            "[a] orange\n [b] grön\n [c] gul\n";
 
     String q3 = "Vilken färg är äpplen?\n" +
 
-            "a, rund\n b, fyrkantig\n c, Trekantig\n";
+            "[a] rund\n [b] fyrkantig\n [c] Trekantig\n";
 
     public void runQuiz() {
         int score = 0;

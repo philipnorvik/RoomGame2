@@ -10,24 +10,27 @@ public class Display {
     JPanel panel;
 
     JTextPane question;
+    JLabel points;
 
     List<JButton> buttons;
 
-    public Display(String question, String answer1, String answer2, String answer3) {
+    public Display() {
         frame = new JFrame();
         panel = new JPanel();
+        points = new JLabel();
+
+        points.setText("points: ");
 
         this.question = new JTextPane();
         this.question.setEditable(false);
-        this.question.setText(question);
 
         frame.add(panel);
 
         buttons = new ArrayList<>();
 
-        buttons.add(new JButton(answer1));
-        buttons.add(new JButton(answer2));
-        buttons.add(new JButton(answer3));
+        buttons.add(new JButton());
+        buttons.add(new JButton());
+        buttons.add(new JButton());
 
         Collections.shuffle(buttons);
 
@@ -35,6 +38,7 @@ public class Display {
         panel.add(buttons.get(0));
         panel.add(buttons.get(1));
         panel.add(buttons.get(2));
+        panel.add(points);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 400);

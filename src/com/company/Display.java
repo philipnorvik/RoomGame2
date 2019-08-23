@@ -68,6 +68,10 @@ public class Display {
     }
 
     public void setQuestion(PhilipQ quest){
+        if(quest == null || index >= 3) {
+            System.out.println("Game over: " + pc.getPoints());
+            System.exit(0);
+        }
         points.setText("points: " + pc.getPoints());
         pk = quest;
         question.setText(quest.getQuestionAndAnswers(index).getQuestion());

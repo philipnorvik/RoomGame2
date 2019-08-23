@@ -32,5 +32,17 @@ public class Display {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 400);
         frame.setVisible(true);
+
+        this.answer1.addActionListener(e -> {
+
+        });
+
+        this.answer2.addActionListener(e -> {
+
+        });
+
+        this.answer3.addActionListener(e -> {
+
+        });
     }
 }

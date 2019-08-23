@@ -41,7 +41,7 @@ public class Display {
         frame.setVisible(true);
 
         this.buttons.get(0).addActionListener(e -> {
-            //rätt svar
+            
         });
 
         this.buttons.get(1).addActionListener(e -> {
@@ -51,5 +51,9 @@ public class Display {
         this.buttons.get(2).addActionListener(e -> {
             //fel svar
         });
+    }
+
+    public void setQuestion(PhilipQ quest){
+        question.setText(quest.getQuestion());
     }
 }

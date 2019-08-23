@@ -23,7 +23,8 @@ public class PhilipQ {
 
         questions.add(new PhilipQ(q1, "c"));
         questions.add(new PhilipQ(q2, "a"));
-        questions.add(new PhilipQ(q3, "a"));
+		questions.add(new PhilipQ(q3, "a"));
+		
         index = 0;
     }
 
@@ -35,7 +36,7 @@ public class PhilipQ {
     public PhilipQ getQuestion(){
         if(index < questions.size()){
             return questions.get(index++);
-		    }
-		    return null;
+		}
+		return null;
     }
 }

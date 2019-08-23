@@ -33,7 +33,7 @@ public class PhilipQ {
     }
 
     public PhilipQ getQuestion(){
-        if(index < questions.size()){
+        if(index < questions.length){
             return questions.get(index++);
 		    }
 		    return null;

@@ -45,6 +45,6 @@ public class PhilipQ {
             }
         }
         System.out.println("din poäng: " + score);
-
+        scanner.close();
     }
 }

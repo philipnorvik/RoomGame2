@@ -9,8 +9,12 @@ public class Display {
     JFrame frame;
     JPanel panel;
 
+    PhilipQ pk;
+
     JTextPane question;
     JLabel points;
+    int index = 0;
+    Pointcounter pc;
 
     List<JButton> buttons;
 
@@ -19,7 +23,9 @@ public class Display {
         panel = new JPanel();
         points = new JLabel();
 
-        points.setText("points: ");
+        pc = new Pointcounter();
+
+        points.setText("points: 0");
 
         this.question = new JTextPane();
         this.question.setEditable(false);
@@ -46,14 +52,40 @@ public class Display {
 
         this.buttons.get(0).addActionListener(e -> {
             //rätt svar
+            pc.addPoint();
+            setQuestion(pk);
         });
 
         this.buttons.get(1).addActionListener(e -> {
             //fel svar
+            setQuestion(pk);
         });
 
         this.buttons.get(2).addActionListener(e -> {
             //fel svar
+            setQuestion(pk);
         });
+    }
+
+    public void setQuestion(PhilipQ quest){
+        if(quest == null || index >= 3) {
+            System.out.println("Game over: " + pc.getPoints());
+            System.exit(0);
+        }
+        points.setText("points: " + pc.getPoints());
+        pk = quest;
+        question.setText(quest.getQuestionAndAnswers(index).getQuestion());
+        buttons.get(0).setText(quest.getQuestionAndAnswers(index).getAnswer1());
+        buttons.get(1).setText(quest.getQuestionAndAnswers(index).getAnswer2());
+        buttons.get(2).setText(quest.getQuestionAndAnswers(index).getAnswer3());
+
+        index++;
+
+        panel.repaint();
+        panel.revalidate();
+    }
+
+    public int getIndex(){
+        return index;
     }
 }

@@ -6,36 +6,37 @@ import java.util.Scanner;
 
 public class PhilipQ {
 
-    private String question= "";
-    private String answer ="";
-    private List<PhilipQ> questions = new ArrayList<>();
+    private List<Question> questions = new ArrayList<>();
     private int index;
 
     public PhilipQ() {
-        String q1 = "Vilken färg är bananer?\n" +
-            "a, blå\n b, grön\n c, gul\n";
+        String q1 = "Vilken färg är bananer?";
+        String a1 = "Blå";
+        String a2 = "grön";
+        String a3 = "gul";
 
-        String q2 = "Vilken färg är apelsiner?\n" +
-            "a, orange\n b, grön\n c, gul\n";
+        String q2 = "Vilken färg är apelsiner?";
+        String a4 = "Orange";
+        String a5 = "Grön";
+        String a6 = "Gul";
 
-        String q3 = "Vilken färg är äpplen?\n" +
-            "a, rund\n b, fyrkantig\n c, Trekantig\n";
+        String q3 = "Vilken färg är äpplen?";
+        String a7 = "Rund";
+        String a8 = "Fyrkantig";
+        String a9 = "Trekantig";
 
-        questions.add(new PhilipQ(q1, "c"));
-        questions.add(new PhilipQ(q2, "a"));
-        questions.add(new PhilipQ(q3, "a"));
+        questions.add(new Question(q1, a3, a2, a1, a3));
+        questions.add(new Question(q2, a4, a5, a6, a4));
+        questions.add(new Question(q3, a7, a8, a9, a7));
+
         index = 0;
     }
 
-    public PhilipQ(String question, String answer) {
-        this.question = question;
-        this.answer = answer;
-    }
+    public Question getQuestionAndAnswers(int index) {
+        if(index >= 3) {
+            return null;
+        }
+        return questions.get(index);
 
-    public PhilipQ getQuestion(){
-        if(index < questions.size()){
-            return questions.get(index++);
-		    }
-		    return null;
     }
 }

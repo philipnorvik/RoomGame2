@@ -1,8 +1,5 @@
 package com.company;
 
-
-import com.company.PhilipQ;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -10,5 +7,6 @@ public class Main {
         PhilipQ pQuestion = new PhilipQ();
         StevieQ sQuestion = new StevieQ();
         Game game = new Game(display, pQuestion, sQuestion);
+        game.runGame();
     }
 }

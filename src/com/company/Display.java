@@ -58,9 +58,12 @@ public class Display {
     }
 
     public void setQuestion(PhilipQ quest){
-        question.setText(quest.getQuestionAndAnswers().getQuestion());
-        buttons.get(0).setText(quest.getQuestionAndAnswers().getAnswer1());
-        buttons.get(1).setText(quest.getQuestionAndAnswers().getAnswer2());
-        buttons.get(2).setText(quest.getQuestionAndAnswers().getAnswer3());
+        question.setText(quest.getQuestionAndAnswers(0).getQuestion());
+        buttons.get(0).setText(quest.getQuestionAndAnswers(0).getAnswer1());
+        buttons.get(1).setText(quest.getQuestionAndAnswers(0).getAnswer2());
+        buttons.get(2).setText(quest.getQuestionAndAnswers(0).getAnswer3());
+
+        panel.repaint();
+        panel.revalidate();
     }
 }

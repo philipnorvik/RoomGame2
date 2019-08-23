@@ -14,6 +14,6 @@ public class Game {
     }
 
     public void runGame(){
-        display.setQuestion();
+        display.setQuestion(pQuestion);
     }
 }

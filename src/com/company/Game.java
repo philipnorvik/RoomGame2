@@ -13,5 +13,7 @@ public class Game {
         this.sQuestion = sQuestion;
     }
 
-    
+    public void runGame(){
+        display.setQuestion();
+    }
 }
